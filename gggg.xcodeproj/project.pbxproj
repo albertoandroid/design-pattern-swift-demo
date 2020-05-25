@@ -1,0 +1,941 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F3583724246EA14A00F136DC /* PaymentAF.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3583723246EA14A00F136DC /* PaymentAF.swift */; };
+		F3583726246EA1BA00F136DC /* CardPaymentAF.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3583725246EA1BA00F136DC /* CardPaymentAF.swift */; };
+		F3583728246EA1C700F136DC /* GooglePaymentAF.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3583727246EA1C700F136DC /* GooglePaymentAF.swift */; };
+		F358372A246EA2C100F136DC /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3583729246EA2C100F136DC /* Method.swift */; };
+		F358372C246EA34400F136DC /* MontlyMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358372B246EA34400F136DC /* MontlyMethod.swift */; };
+		F358372E246EA5E000F136DC /* PaymentInAdvanceMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358372D246EA5E000F136DC /* PaymentInAdvanceMethod.swift */; };
+		F3583730246EA64100F136DC /* AlbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358372F246EA64100F136DC /* AlbstractFactory.swift */; };
+		F3583732246EA70300F136DC /* PaymentInAdvanceCardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3583731246EA70300F136DC /* PaymentInAdvanceCardFactory.swift */; };
+		F3583734246EA77000F136DC /* MontlyGoogleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3583733246EA77000F136DC /* MontlyGoogleFactory.swift */; };
+		F3583736246EA9B100F136DC /* PaymentMethodClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3583735246EA9B100F136DC /* PaymentMethodClient.swift */; };
+		F35912AF246D8CDE005BDB3B /* PaymentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35912AE246D8CDE005BDB3B /* PaymentFactory.swift */; };
+		F35912B1246D95B9005BDB3B /* TypePayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35912B0246D95B9005BDB3B /* TypePayment.swift */; };
+		F36201132473FE9F00487B91 /* OperationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36201122473FE9F00487B91 /* OperationTarget.swift */; };
+		F36201152473FF2700487B91 /* OperationAdaptee.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36201142473FF2700487B91 /* OperationAdaptee.swift */; };
+		F36201172473FF6B00487B91 /* OperationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36201162473FF6B00487B91 /* OperationAdapter.swift */; };
+		F36201222476D75A00487B91 /* CreditCardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36201212476D75A00487B91 /* CreditCardProtocol.swift */; };
+		F36201242476D7B300487B91 /* SecureCreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36201232476D7B300487B91 /* SecureCreditCard.swift */; };
+		F36201262476D81C00487B91 /* UnsecureCreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36201252476D81C00487B91 /* UnsecureCreditCard.swift */; };
+		F36201282476D85900487B91 /* CreditCardB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36201272476D85900487B91 /* CreditCardB.swift */; };
+		F362012A2476D95400487B91 /* ClassicCreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36201292476D95400487B91 /* ClassicCreditCard.swift */; };
+		F36201382476E8EA00487B91 /* AccountComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36201372476E8EA00487B91 /* AccountComponent.swift */; };
+		F362013A2476E9DA00487B91 /* SavingsAccoutn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36201392476E9DA00487B91 /* SavingsAccoutn.swift */; };
+		F362013E2476F84D00487B91 /* CurrentAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362013D2476F84D00487B91 /* CurrentAccount.swift */; };
+		F36201402476F89500487B91 /* AccountComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362013F2476F89500487B91 /* AccountComposite.swift */; };
+		F362014C24782D7800487B91 /* CreditComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362014B24782D7700487B91 /* CreditComponent.swift */; };
+		F362014E24782DBC00487B91 /* BlackCreditComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362014D24782DBC00487B91 /* BlackCreditComponent.swift */; };
+		F362015024782E0800487B91 /* GoldCreditComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362014F24782E0800487B91 /* GoldCreditComponent.swift */; };
+		F362015224782E5500487B91 /* CreditDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362015124782E5500487B91 /* CreditDecorator.swift */; };
+		F362015424782F1D00487B91 /* InternationalPaymentDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362015324782F1D00487B91 /* InternationalPaymentDecorator.swift */; };
+		F3620156247831CA00487B91 /* SecureDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3620155247831CA00487B91 /* SecureDecorator.swift */; };
+		F3620166247938C300487B91 /* CreditModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3620165247938C300487B91 /* CreditModule.swift */; };
+		F36201682479393300487B91 /* BlackModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36201672479393300487B91 /* BlackModule.swift */; };
+		F362016A2479394100487B91 /* GoldModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36201692479394100487B91 /* GoldModule.swift */; };
+		F362016C2479394D00487B91 /* SilverModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362016B2479394D00487B91 /* SilverModule.swift */; };
+		F362016E247939C400487B91 /* CreditMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362016D247939C400487B91 /* CreditMarker.swift */; };
+		F3620185247990F000487B91 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3620184247990F000487B91 /* Enemy.swift */; };
+		F36201872479914100487B91 /* Detective.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36201862479914100487B91 /* Detective.swift */; };
+		F3620189247991F600487B91 /* Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3620188247991F600487B91 /* Private.swift */; };
+		F362018B2479924700487B91 /* EnemyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362018A2479924700487B91 /* EnemyFactory.swift */; };
+		F36201972479AE0600487B91 /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36201962479AE0600487B91 /* Internet.swift */; };
+		F36201992479AE5E00487B91 /* AccessToInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36201982479AE5E00487B91 /* AccessToInternet.swift */; };
+		F362019B2479AEC400487B91 /* ProxyInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362019A2479AEC400487B91 /* ProxyInternet.swift */; };
+		F3A49779246FFCB5009D08DF /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A49778246FFCB5009D08DF /* Expression.swift */; };
+		F3A4977B246FFCED009D08DF /* AndExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A4977A246FFCED009D08DF /* AndExpression.swift */; };
+		F3A4977D246FFDEF009D08DF /* OrExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A4977C246FFDEF009D08DF /* OrExpression.swift */; };
+		F3A4977F246FFE20009D08DF /* TerminalExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A4977E246FFE20009D08DF /* TerminalExpression.swift */; };
+		F3A4979024701239009D08DF /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A4978F24701239009D08DF /* CreditCard.swift */; };
+		F3A497962470157A009D08DF /* CreditCardsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497952470157A009D08DF /* CreditCardsCollection.swift */; };
+		F3A497982470160F009D08DF /* CreditCardsIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497972470160F009D08DF /* CreditCardsIteractor.swift */; };
+		F3A497A224704644009D08DF /* Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497A124704644009D08DF /* Mediator.swift */; };
+		F3A497A424704676009D08DF /* Colleague.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497A324704676009D08DF /* Colleague.swift */; };
+		F3A497A6247047B7009D08DF /* ConcreteCollegue1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497A5247047B7009D08DF /* ConcreteCollegue1.swift */; };
+		F3A497A8247048E0009D08DF /* ConcreteCollege2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497A7247048E0009D08DF /* ConcreteCollege2.swift */; };
+		F3A497AA2470493B009D08DF /* ConcreteMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497A92470493B009D08DF /* ConcreteMediator.swift */; };
+		F3A497B82470656E009D08DF /* Carataker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497B72470656E009D08DF /* Carataker.swift */; };
+		F3A497BA247065C6009D08DF /* ArticleMemento.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497B9247065C6009D08DF /* ArticleMemento.swift */; };
+		F3A497BC2470674C009D08DF /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497BB2470674C009D08DF /* Article.swift */; };
+		F3A497CD24716BD1009D08DF /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497CC24716BD1009D08DF /* Subject.swift */; };
+		F3A497CF24716BF8009D08DF /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497CE24716BF8009D08DF /* Observer.swift */; };
+		F3A497D124716C1B009D08DF /* TrafficLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497D024716C1B009D08DF /* TrafficLight.swift */; };
+		F3A497D324716D7C009D08DF /* MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497D224716D7C009D08DF /* MessagePublisher.swift */; };
+		F3A497D524717046009D08DF /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497D424717046009D08DF /* Car.swift */; };
+		F3A497D724717124009D08DF /* Pedestrian.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497D624717124009D08DF /* Pedestrian.swift */; };
+		F3A497EE2471927E009D08DF /* MobileAlertStateContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497ED2471927E009D08DF /* MobileAlertStateContext.swift */; };
+		F3A497F0247192BA009D08DF /* MobileAlertState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497EF247192BA009D08DF /* MobileAlertState.swift */; };
+		F3A497F22471933B009D08DF /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497F12471933B009D08DF /* Sound.swift */; };
+		F3A497F424719368009D08DF /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497F324719368009D08DF /* Vibration.swift */; };
+		F3A497F624719391009D08DF /* Silent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A497F524719391009D08DF /* Silent.swift */; };
+		F3A498042471B79D009D08DF /* StrategyTextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A498032471B79D009D08DF /* StrategyTextFormatter.swift */; };
+		F3A498062471B7CD009D08DF /* CapitalStrategyTextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A498052471B7CD009D08DF /* CapitalStrategyTextFormatter.swift */; };
+		F3A498082471B81E009D08DF /* LowerStrategyTestFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A498072471B81E009D08DF /* LowerStrategyTestFormatter.swift */; };
+		F3A4980A2471B860009D08DF /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A498092471B860009D08DF /* Context.swift */; };
+		F3A498162472DDC5009D08DF /* PaymentTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A498152472DDC5009D08DF /* PaymentTemplate.swift */; };
+		F3A498182472DEF1009D08DF /* Paypal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A498172472DEF1009D08DF /* Paypal.swift */; };
+		F3A4981A2472E055009D08DF /* Visa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A498192472E055009D08DF /* Visa.swift */; };
+		F3A498242472E867009D08DF /* CreditCardVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A498232472E867009D08DF /* CreditCardVisitor.swift */; };
+		F3A498262472EA41009D08DF /* OfferElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A498252472EA41009D08DF /* OfferElement.swift */; };
+		F3A498282472EAFC009D08DF /* GasolineOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A498272472EAFC009D08DF /* GasolineOffer.swift */; };
+		F3A4982A2472EB14009D08DF /* FlightsOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A498292472EB14009D08DF /* FlightsOffer.swift */; };
+		F3A4982C247307AE009D08DF /* ClassicCreditCardVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A4982B247307AE009D08DF /* ClassicCreditCardVisitor.swift */; };
+		F3A4982E24730803009D08DF /* BlackCreditCardVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A4982D24730803009D08DF /* BlackCreditCardVisitor.swift */; };
+		F3A9D719246ECB3C00515150 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9D718246ECB3C00515150 /* Card.swift */; };
+		F3A9D726246EE5C400515150 /* PrototypeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9D725246EE5C400515150 /* PrototypeCard.swift */; };
+		F3A9D728246EE81700515150 /* VisaCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9D727246EE81700515150 /* VisaCard.swift */; };
+		F3A9D733246F017E00515150 /* CardSinglenton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9D732246F017E00515150 /* CardSinglenton.swift */; };
+		F3A9D73A246F139B00515150 /* ApproveLoanHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9D739246F139B00515150 /* ApproveLoanHandler.swift */; };
+		F3A9D73C246F146200515150 /* BankHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9D73B246F146200515150 /* BankHandler.swift */; };
+		F3A9D73E246F156900515150 /* GoldHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9D73D246F156900515150 /* GoldHandler.swift */; };
+		F3A9D740246FD5A700515150 /* PlatiniumHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9D73F246FD5A700515150 /* PlatiniumHandler.swift */; };
+		F3A9D742246FD5E500515150 /* BlackHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9D741246FD5E500515150 /* BlackHandler.swift */; };
+		F3A9D751246FE2E900515150 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9D750246FE2E900515150 /* Command.swift */; };
+		F3A9D753246FE39400515150 /* CreditCardReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9D752246FE39400515150 /* CreditCardReceiver.swift */; };
+		F3A9D755246FE6D500515150 /* CreditCardActivateCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9D754246FE6D500515150 /* CreditCardActivateCommand.swift */; };
+		F3A9D757246FE77E00515150 /* CreditCardDesactivateCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9D756246FE77E00515150 /* CreditCardDesactivateCommand.swift */; };
+		F3A9D759246FE7F400515150 /* CreditCardInvoker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9D758246FE7F400515150 /* CreditCardInvoker.swift */; };
+		F3CB06BB246C6EAA00319BC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB06BA246C6EAA00319BC4 /* AppDelegate.swift */; };
+		F3CB06BD246C6EAA00319BC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB06BC246C6EAA00319BC4 /* SceneDelegate.swift */; };
+		F3CB06BF246C6EAA00319BC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB06BE246C6EAA00319BC4 /* ViewController.swift */; };
+		F3CB06C2246C6EAA00319BC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CB06C0246C6EAA00319BC4 /* Main.storyboard */; };
+		F3CB06C4246C6EB000319BC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CB06C3246C6EB000319BC4 /* Assets.xcassets */; };
+		F3CB06C7246C6EB000319BC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CB06C5246C6EB000319BC4 /* LaunchScreen.storyboard */; };
+		F3CB06D1246C6F3C00319BC4 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB06D0246C6F3C00319BC4 /* Payment.swift */; };
+		F3CB06D3246C700C00319BC4 /* GooglePayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB06D2246C700C00319BC4 /* GooglePayment.swift */; };
+		F3CB06D5246C707500319BC4 /* CardPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB06D4246C707500319BC4 /* CardPayment.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F3583723246EA14A00F136DC /* PaymentAF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAF.swift; sourceTree = "<group>"; };
+		F3583725246EA1BA00F136DC /* CardPaymentAF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPaymentAF.swift; sourceTree = "<group>"; };
+		F3583727246EA1C700F136DC /* GooglePaymentAF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePaymentAF.swift; sourceTree = "<group>"; };
+		F3583729246EA2C100F136DC /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		F358372B246EA34400F136DC /* MontlyMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MontlyMethod.swift; sourceTree = "<group>"; };
+		F358372D246EA5E000F136DC /* PaymentInAdvanceMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInAdvanceMethod.swift; sourceTree = "<group>"; };
+		F358372F246EA64100F136DC /* AlbstractFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbstractFactory.swift; sourceTree = "<group>"; };
+		F3583731246EA70300F136DC /* PaymentInAdvanceCardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInAdvanceCardFactory.swift; sourceTree = "<group>"; };
+		F3583733246EA77000F136DC /* MontlyGoogleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MontlyGoogleFactory.swift; sourceTree = "<group>"; };
+		F3583735246EA9B100F136DC /* PaymentMethodClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodClient.swift; sourceTree = "<group>"; };
+		F35912AE246D8CDE005BDB3B /* PaymentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFactory.swift; sourceTree = "<group>"; };
+		F35912B0246D95B9005BDB3B /* TypePayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypePayment.swift; sourceTree = "<group>"; };
+		F36201122473FE9F00487B91 /* OperationTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationTarget.swift; sourceTree = "<group>"; };
+		F36201142473FF2700487B91 /* OperationAdaptee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationAdaptee.swift; sourceTree = "<group>"; };
+		F36201162473FF6B00487B91 /* OperationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationAdapter.swift; sourceTree = "<group>"; };
+		F36201212476D75A00487B91 /* CreditCardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardProtocol.swift; sourceTree = "<group>"; };
+		F36201232476D7B300487B91 /* SecureCreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureCreditCard.swift; sourceTree = "<group>"; };
+		F36201252476D81C00487B91 /* UnsecureCreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsecureCreditCard.swift; sourceTree = "<group>"; };
+		F36201272476D85900487B91 /* CreditCardB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardB.swift; sourceTree = "<group>"; };
+		F36201292476D95400487B91 /* ClassicCreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicCreditCard.swift; sourceTree = "<group>"; };
+		F36201372476E8EA00487B91 /* AccountComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountComponent.swift; sourceTree = "<group>"; };
+		F36201392476E9DA00487B91 /* SavingsAccoutn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsAccoutn.swift; sourceTree = "<group>"; };
+		F362013D2476F84D00487B91 /* CurrentAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAccount.swift; sourceTree = "<group>"; };
+		F362013F2476F89500487B91 /* AccountComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountComposite.swift; sourceTree = "<group>"; };
+		F362014B24782D7700487B91 /* CreditComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditComponent.swift; sourceTree = "<group>"; };
+		F362014D24782DBC00487B91 /* BlackCreditComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCreditComponent.swift; sourceTree = "<group>"; };
+		F362014F24782E0800487B91 /* GoldCreditComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldCreditComponent.swift; sourceTree = "<group>"; };
+		F362015124782E5500487B91 /* CreditDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditDecorator.swift; sourceTree = "<group>"; };
+		F362015324782F1D00487B91 /* InternationalPaymentDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternationalPaymentDecorator.swift; sourceTree = "<group>"; };
+		F3620155247831CA00487B91 /* SecureDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureDecorator.swift; sourceTree = "<group>"; };
+		F3620165247938C300487B91 /* CreditModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditModule.swift; sourceTree = "<group>"; };
+		F36201672479393300487B91 /* BlackModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackModule.swift; sourceTree = "<group>"; };
+		F36201692479394100487B91 /* GoldModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldModule.swift; sourceTree = "<group>"; };
+		F362016B2479394D00487B91 /* SilverModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilverModule.swift; sourceTree = "<group>"; };
+		F362016D247939C400487B91 /* CreditMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditMarker.swift; sourceTree = "<group>"; };
+		F3620184247990F000487B91 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		F36201862479914100487B91 /* Detective.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detective.swift; sourceTree = "<group>"; };
+		F3620188247991F600487B91 /* Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Private.swift; sourceTree = "<group>"; };
+		F362018A2479924700487B91 /* EnemyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyFactory.swift; sourceTree = "<group>"; };
+		F36201962479AE0600487B91 /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
+		F36201982479AE5E00487B91 /* AccessToInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToInternet.swift; sourceTree = "<group>"; };
+		F362019A2479AEC400487B91 /* ProxyInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyInternet.swift; sourceTree = "<group>"; };
+		F3A49778246FFCB5009D08DF /* Expression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
+		F3A4977A246FFCED009D08DF /* AndExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndExpression.swift; sourceTree = "<group>"; };
+		F3A4977C246FFDEF009D08DF /* OrExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrExpression.swift; sourceTree = "<group>"; };
+		F3A4977E246FFE20009D08DF /* TerminalExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalExpression.swift; sourceTree = "<group>"; };
+		F3A4978F24701239009D08DF /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		F3A497952470157A009D08DF /* CreditCardsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardsCollection.swift; sourceTree = "<group>"; };
+		F3A497972470160F009D08DF /* CreditCardsIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardsIteractor.swift; sourceTree = "<group>"; };
+		F3A497A124704644009D08DF /* Mediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mediator.swift; sourceTree = "<group>"; };
+		F3A497A324704676009D08DF /* Colleague.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colleague.swift; sourceTree = "<group>"; };
+		F3A497A5247047B7009D08DF /* ConcreteCollegue1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteCollegue1.swift; sourceTree = "<group>"; };
+		F3A497A7247048E0009D08DF /* ConcreteCollege2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteCollege2.swift; sourceTree = "<group>"; };
+		F3A497A92470493B009D08DF /* ConcreteMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteMediator.swift; sourceTree = "<group>"; };
+		F3A497B72470656E009D08DF /* Carataker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carataker.swift; sourceTree = "<group>"; };
+		F3A497B9247065C6009D08DF /* ArticleMemento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleMemento.swift; sourceTree = "<group>"; };
+		F3A497BB2470674C009D08DF /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		F3A497CC24716BD1009D08DF /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		F3A497CE24716BF8009D08DF /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		F3A497D024716C1B009D08DF /* TrafficLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLight.swift; sourceTree = "<group>"; };
+		F3A497D224716D7C009D08DF /* MessagePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePublisher.swift; sourceTree = "<group>"; };
+		F3A497D424717046009D08DF /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		F3A497D624717124009D08DF /* Pedestrian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pedestrian.swift; sourceTree = "<group>"; };
+		F3A497ED2471927E009D08DF /* MobileAlertStateContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAlertStateContext.swift; sourceTree = "<group>"; };
+		F3A497EF247192BA009D08DF /* MobileAlertState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAlertState.swift; sourceTree = "<group>"; };
+		F3A497F12471933B009D08DF /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		F3A497F324719368009D08DF /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
+		F3A497F524719391009D08DF /* Silent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Silent.swift; sourceTree = "<group>"; };
+		F3A498032471B79D009D08DF /* StrategyTextFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyTextFormatter.swift; sourceTree = "<group>"; };
+		F3A498052471B7CD009D08DF /* CapitalStrategyTextFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapitalStrategyTextFormatter.swift; sourceTree = "<group>"; };
+		F3A498072471B81E009D08DF /* LowerStrategyTestFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowerStrategyTestFormatter.swift; sourceTree = "<group>"; };
+		F3A498092471B860009D08DF /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		F3A498152472DDC5009D08DF /* PaymentTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTemplate.swift; sourceTree = "<group>"; };
+		F3A498172472DEF1009D08DF /* Paypal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paypal.swift; sourceTree = "<group>"; };
+		F3A498192472E055009D08DF /* Visa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visa.swift; sourceTree = "<group>"; };
+		F3A498232472E867009D08DF /* CreditCardVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardVisitor.swift; sourceTree = "<group>"; };
+		F3A498252472EA41009D08DF /* OfferElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferElement.swift; sourceTree = "<group>"; };
+		F3A498272472EAFC009D08DF /* GasolineOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasolineOffer.swift; sourceTree = "<group>"; };
+		F3A498292472EB14009D08DF /* FlightsOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsOffer.swift; sourceTree = "<group>"; };
+		F3A4982B247307AE009D08DF /* ClassicCreditCardVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicCreditCardVisitor.swift; sourceTree = "<group>"; };
+		F3A4982D24730803009D08DF /* BlackCreditCardVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCreditCardVisitor.swift; sourceTree = "<group>"; };
+		F3A9D718246ECB3C00515150 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		F3A9D725246EE5C400515150 /* PrototypeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrototypeCard.swift; sourceTree = "<group>"; };
+		F3A9D727246EE81700515150 /* VisaCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaCard.swift; sourceTree = "<group>"; };
+		F3A9D732246F017E00515150 /* CardSinglenton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSinglenton.swift; sourceTree = "<group>"; };
+		F3A9D739246F139B00515150 /* ApproveLoanHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveLoanHandler.swift; sourceTree = "<group>"; };
+		F3A9D73B246F146200515150 /* BankHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankHandler.swift; sourceTree = "<group>"; };
+		F3A9D73D246F156900515150 /* GoldHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldHandler.swift; sourceTree = "<group>"; };
+		F3A9D73F246FD5A700515150 /* PlatiniumHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatiniumHandler.swift; sourceTree = "<group>"; };
+		F3A9D741246FD5E500515150 /* BlackHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackHandler.swift; sourceTree = "<group>"; };
+		F3A9D750246FE2E900515150 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		F3A9D752246FE39400515150 /* CreditCardReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardReceiver.swift; sourceTree = "<group>"; };
+		F3A9D754246FE6D500515150 /* CreditCardActivateCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardActivateCommand.swift; sourceTree = "<group>"; };
+		F3A9D756246FE77E00515150 /* CreditCardDesactivateCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardDesactivateCommand.swift; sourceTree = "<group>"; };
+		F3A9D758246FE7F400515150 /* CreditCardInvoker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardInvoker.swift; sourceTree = "<group>"; };
+		F3CB06B7246C6EAA00319BC4 /* gggg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gggg.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3CB06BA246C6EAA00319BC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F3CB06BC246C6EAA00319BC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F3CB06BE246C6EAA00319BC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F3CB06C1246C6EAA00319BC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F3CB06C3246C6EB000319BC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3CB06C6246C6EB000319BC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3CB06C8246C6EB000319BC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3CB06D0246C6F3C00319BC4 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		F3CB06D2246C700C00319BC4 /* GooglePayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePayment.swift; sourceTree = "<group>"; };
+		F3CB06D4246C707500319BC4 /* CardPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPayment.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3CB06B4246C6EAA00319BC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3583722246E9F7C00F136DC /* abstractfactory */ = {
+			isa = PBXGroup;
+			children = (
+				F3583723246EA14A00F136DC /* PaymentAF.swift */,
+				F3583725246EA1BA00F136DC /* CardPaymentAF.swift */,
+				F3583727246EA1C700F136DC /* GooglePaymentAF.swift */,
+				F3583729246EA2C100F136DC /* Method.swift */,
+				F358372B246EA34400F136DC /* MontlyMethod.swift */,
+				F358372D246EA5E000F136DC /* PaymentInAdvanceMethod.swift */,
+				F358372F246EA64100F136DC /* AlbstractFactory.swift */,
+				F3583731246EA70300F136DC /* PaymentInAdvanceCardFactory.swift */,
+				F3583733246EA77000F136DC /* MontlyGoogleFactory.swift */,
+				F3583735246EA9B100F136DC /* PaymentMethodClient.swift */,
+			);
+			path = abstractfactory;
+			sourceTree = "<group>";
+		};
+		F36201202476D72900487B91 /* bridge */ = {
+			isa = PBXGroup;
+			children = (
+				F36201212476D75A00487B91 /* CreditCardProtocol.swift */,
+				F36201232476D7B300487B91 /* SecureCreditCard.swift */,
+				F36201252476D81C00487B91 /* UnsecureCreditCard.swift */,
+				F36201272476D85900487B91 /* CreditCardB.swift */,
+				F36201292476D95400487B91 /* ClassicCreditCard.swift */,
+			);
+			path = bridge;
+			sourceTree = "<group>";
+		};
+		F36201362476E56F00487B91 /* composite */ = {
+			isa = PBXGroup;
+			children = (
+				F36201372476E8EA00487B91 /* AccountComponent.swift */,
+				F36201392476E9DA00487B91 /* SavingsAccoutn.swift */,
+				F362013D2476F84D00487B91 /* CurrentAccount.swift */,
+				F362013F2476F89500487B91 /* AccountComposite.swift */,
+			);
+			path = composite;
+			sourceTree = "<group>";
+		};
+		F362014A24782D6100487B91 /* decorator */ = {
+			isa = PBXGroup;
+			children = (
+				F362014B24782D7700487B91 /* CreditComponent.swift */,
+				F362014D24782DBC00487B91 /* BlackCreditComponent.swift */,
+				F362014F24782E0800487B91 /* GoldCreditComponent.swift */,
+				F362015124782E5500487B91 /* CreditDecorator.swift */,
+				F362015324782F1D00487B91 /* InternationalPaymentDecorator.swift */,
+				F3620155247831CA00487B91 /* SecureDecorator.swift */,
+			);
+			path = decorator;
+			sourceTree = "<group>";
+		};
+		F3620164247859B800487B91 /* facade */ = {
+			isa = PBXGroup;
+			children = (
+				F3620165247938C300487B91 /* CreditModule.swift */,
+				F36201672479393300487B91 /* BlackModule.swift */,
+				F36201692479394100487B91 /* GoldModule.swift */,
+				F362016B2479394D00487B91 /* SilverModule.swift */,
+				F362016D247939C400487B91 /* CreditMarker.swift */,
+			);
+			path = facade;
+			sourceTree = "<group>";
+		};
+		F3620183247990D800487B91 /* flyweight */ = {
+			isa = PBXGroup;
+			children = (
+				F3620184247990F000487B91 /* Enemy.swift */,
+				F36201862479914100487B91 /* Detective.swift */,
+				F3620188247991F600487B91 /* Private.swift */,
+				F362018A2479924700487B91 /* EnemyFactory.swift */,
+			);
+			path = flyweight;
+			sourceTree = "<group>";
+		};
+		F36201952479ADF700487B91 /* proxy */ = {
+			isa = PBXGroup;
+			children = (
+				F36201962479AE0600487B91 /* Internet.swift */,
+				F36201982479AE5E00487B91 /* AccessToInternet.swift */,
+				F362019A2479AEC400487B91 /* ProxyInternet.swift */,
+			);
+			path = proxy;
+			sourceTree = "<group>";
+		};
+		F3A49777246FFCA2009D08DF /* interpreter */ = {
+			isa = PBXGroup;
+			children = (
+				F3A49778246FFCB5009D08DF /* Expression.swift */,
+				F3A4977A246FFCED009D08DF /* AndExpression.swift */,
+				F3A4977C246FFDEF009D08DF /* OrExpression.swift */,
+				F3A4977E246FFE20009D08DF /* TerminalExpression.swift */,
+			);
+			path = interpreter;
+			sourceTree = "<group>";
+		};
+		F3A4978E24701224009D08DF /* iterator */ = {
+			isa = PBXGroup;
+			children = (
+				F3A4978F24701239009D08DF /* CreditCard.swift */,
+				F3A497952470157A009D08DF /* CreditCardsCollection.swift */,
+				F3A497972470160F009D08DF /* CreditCardsIteractor.swift */,
+			);
+			path = iterator;
+			sourceTree = "<group>";
+		};
+		F3A497A024704628009D08DF /* mediator */ = {
+			isa = PBXGroup;
+			children = (
+				F3A497A124704644009D08DF /* Mediator.swift */,
+				F3A497A324704676009D08DF /* Colleague.swift */,
+				F3A497A5247047B7009D08DF /* ConcreteCollegue1.swift */,
+				F3A497A7247048E0009D08DF /* ConcreteCollege2.swift */,
+				F3A497A92470493B009D08DF /* ConcreteMediator.swift */,
+			);
+			path = mediator;
+			sourceTree = "<group>";
+		};
+		F3A497B62470654F009D08DF /* memento */ = {
+			isa = PBXGroup;
+			children = (
+				F3A497B72470656E009D08DF /* Carataker.swift */,
+				F3A497B9247065C6009D08DF /* ArticleMemento.swift */,
+				F3A497BB2470674C009D08DF /* Article.swift */,
+			);
+			path = memento;
+			sourceTree = "<group>";
+		};
+		F3A497CB24716BB5009D08DF /* observer */ = {
+			isa = PBXGroup;
+			children = (
+				F3A497D024716C1B009D08DF /* TrafficLight.swift */,
+				F3A497CE24716BF8009D08DF /* Observer.swift */,
+				F3A497CC24716BD1009D08DF /* Subject.swift */,
+				F3A497D224716D7C009D08DF /* MessagePublisher.swift */,
+				F3A497D424717046009D08DF /* Car.swift */,
+				F3A497D624717124009D08DF /* Pedestrian.swift */,
+			);
+			path = observer;
+			sourceTree = "<group>";
+		};
+		F3A497EC2471924D009D08DF /* state */ = {
+			isa = PBXGroup;
+			children = (
+				F3A497ED2471927E009D08DF /* MobileAlertStateContext.swift */,
+				F3A497EF247192BA009D08DF /* MobileAlertState.swift */,
+				F3A497F12471933B009D08DF /* Sound.swift */,
+				F3A497F324719368009D08DF /* Vibration.swift */,
+				F3A497F524719391009D08DF /* Silent.swift */,
+			);
+			path = state;
+			sourceTree = "<group>";
+		};
+		F3A498022471B786009D08DF /* strategy */ = {
+			isa = PBXGroup;
+			children = (
+				F3A498032471B79D009D08DF /* StrategyTextFormatter.swift */,
+				F3A498052471B7CD009D08DF /* CapitalStrategyTextFormatter.swift */,
+				F3A498072471B81E009D08DF /* LowerStrategyTestFormatter.swift */,
+				F3A498092471B860009D08DF /* Context.swift */,
+			);
+			path = strategy;
+			sourceTree = "<group>";
+		};
+		F3A498142472DD9D009D08DF /* templatemethod */ = {
+			isa = PBXGroup;
+			children = (
+				F3A498152472DDC5009D08DF /* PaymentTemplate.swift */,
+				F3A498172472DEF1009D08DF /* Paypal.swift */,
+				F3A498192472E055009D08DF /* Visa.swift */,
+			);
+			path = templatemethod;
+			sourceTree = "<group>";
+		};
+		F3A498222472E84C009D08DF /* visitor */ = {
+			isa = PBXGroup;
+			children = (
+				F3A498232472E867009D08DF /* CreditCardVisitor.swift */,
+				F3A498252472EA41009D08DF /* OfferElement.swift */,
+				F3A498272472EAFC009D08DF /* GasolineOffer.swift */,
+				F3A498292472EB14009D08DF /* FlightsOffer.swift */,
+				F3A4982B247307AE009D08DF /* ClassicCreditCardVisitor.swift */,
+				F3A4982D24730803009D08DF /* BlackCreditCardVisitor.swift */,
+			);
+			path = visitor;
+			sourceTree = "<group>";
+		};
+		F3A4984324731239009D08DF /* structural */ = {
+			isa = PBXGroup;
+			children = (
+				F36201952479ADF700487B91 /* proxy */,
+				F3620183247990D800487B91 /* flyweight */,
+				F3620164247859B800487B91 /* facade */,
+				F362014A24782D6100487B91 /* decorator */,
+				F36201362476E56F00487B91 /* composite */,
+				F36201202476D72900487B91 /* bridge */,
+				F3A4984424731256009D08DF /* adapter */,
+			);
+			path = structural;
+			sourceTree = "<group>";
+		};
+		F3A4984424731256009D08DF /* adapter */ = {
+			isa = PBXGroup;
+			children = (
+				F36201122473FE9F00487B91 /* OperationTarget.swift */,
+				F36201142473FF2700487B91 /* OperationAdaptee.swift */,
+				F36201162473FF6B00487B91 /* OperationAdapter.swift */,
+			);
+			path = adapter;
+			sourceTree = "<group>";
+		};
+		F3A9D717246ECA9B00515150 /* builder */ = {
+			isa = PBXGroup;
+			children = (
+				F3A9D718246ECB3C00515150 /* Card.swift */,
+			);
+			path = builder;
+			sourceTree = "<group>";
+		};
+		F3A9D724246EE5AC00515150 /* prototype */ = {
+			isa = PBXGroup;
+			children = (
+				F3A9D725246EE5C400515150 /* PrototypeCard.swift */,
+				F3A9D727246EE81700515150 /* VisaCard.swift */,
+			);
+			path = prototype;
+			sourceTree = "<group>";
+		};
+		F3A9D731246F015E00515150 /* singlenton */ = {
+			isa = PBXGroup;
+			children = (
+				F3A9D732246F017E00515150 /* CardSinglenton.swift */,
+			);
+			path = singlenton;
+			sourceTree = "<group>";
+		};
+		F3A9D737246F113200515150 /* behavioral */ = {
+			isa = PBXGroup;
+			children = (
+				F3A498222472E84C009D08DF /* visitor */,
+				F3A498142472DD9D009D08DF /* templatemethod */,
+				F3A498022471B786009D08DF /* strategy */,
+				F3A497EC2471924D009D08DF /* state */,
+				F3A497CB24716BB5009D08DF /* observer */,
+				F3A497B62470654F009D08DF /* memento */,
+				F3A497A024704628009D08DF /* mediator */,
+				F3A4978E24701224009D08DF /* iterator */,
+				F3A49777246FFCA2009D08DF /* interpreter */,
+				F3A9D74F246FE2D900515150 /* command */,
+				F3A9D738246F113C00515150 /* chain_responsibilitiy */,
+			);
+			path = behavioral;
+			sourceTree = "<group>";
+		};
+		F3A9D738246F113C00515150 /* chain_responsibilitiy */ = {
+			isa = PBXGroup;
+			children = (
+				F3A9D739246F139B00515150 /* ApproveLoanHandler.swift */,
+				F3A9D73B246F146200515150 /* BankHandler.swift */,
+				F3A9D73D246F156900515150 /* GoldHandler.swift */,
+				F3A9D73F246FD5A700515150 /* PlatiniumHandler.swift */,
+				F3A9D741246FD5E500515150 /* BlackHandler.swift */,
+			);
+			path = chain_responsibilitiy;
+			sourceTree = "<group>";
+		};
+		F3A9D74F246FE2D900515150 /* command */ = {
+			isa = PBXGroup;
+			children = (
+				F3A9D750246FE2E900515150 /* Command.swift */,
+				F3A9D752246FE39400515150 /* CreditCardReceiver.swift */,
+				F3A9D754246FE6D500515150 /* CreditCardActivateCommand.swift */,
+				F3A9D756246FE77E00515150 /* CreditCardDesactivateCommand.swift */,
+				F3A9D758246FE7F400515150 /* CreditCardInvoker.swift */,
+			);
+			path = command;
+			sourceTree = "<group>";
+		};
+		F3CB06AE246C6EAA00319BC4 = {
+			isa = PBXGroup;
+			children = (
+				F3CB06B9246C6EAA00319BC4 /* gggg */,
+				F3CB06B8246C6EAA00319BC4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3CB06B8246C6EAA00319BC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3CB06B7246C6EAA00319BC4 /* gggg.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3CB06B9246C6EAA00319BC4 /* gggg */ = {
+			isa = PBXGroup;
+			children = (
+				F3A4984324731239009D08DF /* structural */,
+				F3A9D737246F113200515150 /* behavioral */,
+				F3CB06CE246C6EF300319BC4 /* creational */,
+				F3CB06BA246C6EAA00319BC4 /* AppDelegate.swift */,
+				F3CB06BC246C6EAA00319BC4 /* SceneDelegate.swift */,
+				F3CB06BE246C6EAA00319BC4 /* ViewController.swift */,
+				F3CB06C0246C6EAA00319BC4 /* Main.storyboard */,
+				F3CB06C3246C6EB000319BC4 /* Assets.xcassets */,
+				F3CB06C5246C6EB000319BC4 /* LaunchScreen.storyboard */,
+				F3CB06C8246C6EB000319BC4 /* Info.plist */,
+			);
+			path = gggg;
+			sourceTree = "<group>";
+		};
+		F3CB06CE246C6EF300319BC4 /* creational */ = {
+			isa = PBXGroup;
+			children = (
+				F3A9D731246F015E00515150 /* singlenton */,
+				F3A9D724246EE5AC00515150 /* prototype */,
+				F3A9D717246ECA9B00515150 /* builder */,
+				F3583722246E9F7C00F136DC /* abstractfactory */,
+				F3CB06CF246C6EFB00319BC4 /* factorymethod */,
+			);
+			path = creational;
+			sourceTree = "<group>";
+		};
+		F3CB06CF246C6EFB00319BC4 /* factorymethod */ = {
+			isa = PBXGroup;
+			children = (
+				F3CB06D0246C6F3C00319BC4 /* Payment.swift */,
+				F3CB06D2246C700C00319BC4 /* GooglePayment.swift */,
+				F3CB06D4246C707500319BC4 /* CardPayment.swift */,
+				F35912AE246D8CDE005BDB3B /* PaymentFactory.swift */,
+				F35912B0246D95B9005BDB3B /* TypePayment.swift */,
+			);
+			path = factorymethod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3CB06B6246C6EAA00319BC4 /* gggg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3CB06CB246C6EB000319BC4 /* Build configuration list for PBXNativeTarget "gggg" */;
+			buildPhases = (
+				F3CB06B3246C6EAA00319BC4 /* Sources */,
+				F3CB06B4246C6EAA00319BC4 /* Frameworks */,
+				F3CB06B5246C6EAA00319BC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gggg;
+			productName = gggg;
+			productReference = F3CB06B7246C6EAA00319BC4 /* gggg.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3CB06AF246C6EAA00319BC4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Alberto Palomar Robledo";
+				TargetAttributes = {
+					F3CB06B6246C6EAA00319BC4 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = F3CB06B2246C6EAA00319BC4 /* Build configuration list for PBXProject "gggg" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3CB06AE246C6EAA00319BC4;
+			productRefGroup = F3CB06B8246C6EAA00319BC4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3CB06B6246C6EAA00319BC4 /* gggg */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3CB06B5246C6EAA00319BC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3CB06C7246C6EB000319BC4 /* LaunchScreen.storyboard in Resources */,
+				F3CB06C4246C6EB000319BC4 /* Assets.xcassets in Resources */,
+				F3CB06C2246C6EAA00319BC4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3CB06B3246C6EAA00319BC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3A9D753246FE39400515150 /* CreditCardReceiver.swift in Sources */,
+				F3A4981A2472E055009D08DF /* Visa.swift in Sources */,
+				F3A9D740246FD5A700515150 /* PlatiniumHandler.swift in Sources */,
+				F3A497B82470656E009D08DF /* Carataker.swift in Sources */,
+				F3583736246EA9B100F136DC /* PaymentMethodClient.swift in Sources */,
+				F362015224782E5500487B91 /* CreditDecorator.swift in Sources */,
+				F3A497EE2471927E009D08DF /* MobileAlertStateContext.swift in Sources */,
+				F36201872479914100487B91 /* Detective.swift in Sources */,
+				F3583726246EA1BA00F136DC /* CardPaymentAF.swift in Sources */,
+				F3A9D728246EE81700515150 /* VisaCard.swift in Sources */,
+				F3A497F22471933B009D08DF /* Sound.swift in Sources */,
+				F3A49779246FFCB5009D08DF /* Expression.swift in Sources */,
+				F36201262476D81C00487B91 /* UnsecureCreditCard.swift in Sources */,
+				F3A498262472EA41009D08DF /* OfferElement.swift in Sources */,
+				F3A4977D246FFDEF009D08DF /* OrExpression.swift in Sources */,
+				F3A9D759246FE7F400515150 /* CreditCardInvoker.swift in Sources */,
+				F362015424782F1D00487B91 /* InternationalPaymentDecorator.swift in Sources */,
+				F3A4979024701239009D08DF /* CreditCard.swift in Sources */,
+				F3A9D719246ECB3C00515150 /* Card.swift in Sources */,
+				F3620156247831CA00487B91 /* SecureDecorator.swift in Sources */,
+				F3A498082471B81E009D08DF /* LowerStrategyTestFormatter.swift in Sources */,
+				F3A498182472DEF1009D08DF /* Paypal.swift in Sources */,
+				F362012A2476D95400487B91 /* ClassicCreditCard.swift in Sources */,
+				F3A498242472E867009D08DF /* CreditCardVisitor.swift in Sources */,
+				F3A9D733246F017E00515150 /* CardSinglenton.swift in Sources */,
+				F36201382476E8EA00487B91 /* AccountComponent.swift in Sources */,
+				F3CB06BF246C6EAA00319BC4 /* ViewController.swift in Sources */,
+				F36201992479AE5E00487B91 /* AccessToInternet.swift in Sources */,
+				F3A498162472DDC5009D08DF /* PaymentTemplate.swift in Sources */,
+				F3CB06BB246C6EAA00319BC4 /* AppDelegate.swift in Sources */,
+				F3A498282472EAFC009D08DF /* GasolineOffer.swift in Sources */,
+				F362014C24782D7800487B91 /* CreditComponent.swift in Sources */,
+				F358372E246EA5E000F136DC /* PaymentInAdvanceMethod.swift in Sources */,
+				F3A497A8247048E0009D08DF /* ConcreteCollege2.swift in Sources */,
+				F362019B2479AEC400487B91 /* ProxyInternet.swift in Sources */,
+				F3A497A224704644009D08DF /* Mediator.swift in Sources */,
+				F362016C2479394D00487B91 /* SilverModule.swift in Sources */,
+				F3A497A424704676009D08DF /* Colleague.swift in Sources */,
+				F3A9D726246EE5C400515150 /* PrototypeCard.swift in Sources */,
+				F3A497D724717124009D08DF /* Pedestrian.swift in Sources */,
+				F3A497F624719391009D08DF /* Silent.swift in Sources */,
+				F3CB06D5246C707500319BC4 /* CardPayment.swift in Sources */,
+				F3A9D751246FE2E900515150 /* Command.swift in Sources */,
+				F3CB06D3246C700C00319BC4 /* GooglePayment.swift in Sources */,
+				F3A4982A2472EB14009D08DF /* FlightsOffer.swift in Sources */,
+				F35912B1246D95B9005BDB3B /* TypePayment.swift in Sources */,
+				F3A497F0247192BA009D08DF /* MobileAlertState.swift in Sources */,
+				F3A9D755246FE6D500515150 /* CreditCardActivateCommand.swift in Sources */,
+				F3A4977F246FFE20009D08DF /* TerminalExpression.swift in Sources */,
+				F3A497BC2470674C009D08DF /* Article.swift in Sources */,
+				F3A497F424719368009D08DF /* Vibration.swift in Sources */,
+				F3583730246EA64100F136DC /* AlbstractFactory.swift in Sources */,
+				F36201402476F89500487B91 /* AccountComposite.swift in Sources */,
+				F3A497AA2470493B009D08DF /* ConcreteMediator.swift in Sources */,
+				F3A4982E24730803009D08DF /* BlackCreditCardVisitor.swift in Sources */,
+				F3CB06D1246C6F3C00319BC4 /* Payment.swift in Sources */,
+				F3A9D73C246F146200515150 /* BankHandler.swift in Sources */,
+				F3A4980A2471B860009D08DF /* Context.swift in Sources */,
+				F3620166247938C300487B91 /* CreditModule.swift in Sources */,
+				F3A497D524717046009D08DF /* Car.swift in Sources */,
+				F362015024782E0800487B91 /* GoldCreditComponent.swift in Sources */,
+				F36201172473FF6B00487B91 /* OperationAdapter.swift in Sources */,
+				F36201222476D75A00487B91 /* CreditCardProtocol.swift in Sources */,
+				F3CB06BD246C6EAA00319BC4 /* SceneDelegate.swift in Sources */,
+				F358372A246EA2C100F136DC /* Method.swift in Sources */,
+				F362013A2476E9DA00487B91 /* SavingsAccoutn.swift in Sources */,
+				F3A497D324716D7C009D08DF /* MessagePublisher.swift in Sources */,
+				F3583728246EA1C700F136DC /* GooglePaymentAF.swift in Sources */,
+				F3A9D73A246F139B00515150 /* ApproveLoanHandler.swift in Sources */,
+				F3620185247990F000487B91 /* Enemy.swift in Sources */,
+				F3A4977B246FFCED009D08DF /* AndExpression.swift in Sources */,
+				F3A498062471B7CD009D08DF /* CapitalStrategyTextFormatter.swift in Sources */,
+				F358372C246EA34400F136DC /* MontlyMethod.swift in Sources */,
+				F3583734246EA77000F136DC /* MontlyGoogleFactory.swift in Sources */,
+				F3A498042471B79D009D08DF /* StrategyTextFormatter.swift in Sources */,
+				F3583724246EA14A00F136DC /* PaymentAF.swift in Sources */,
+				F35912AF246D8CDE005BDB3B /* PaymentFactory.swift in Sources */,
+				F36201132473FE9F00487B91 /* OperationTarget.swift in Sources */,
+				F36201282476D85900487B91 /* CreditCardB.swift in Sources */,
+				F3A497BA247065C6009D08DF /* ArticleMemento.swift in Sources */,
+				F3A497CD24716BD1009D08DF /* Subject.swift in Sources */,
+				F362018B2479924700487B91 /* EnemyFactory.swift in Sources */,
+				F3A497962470157A009D08DF /* CreditCardsCollection.swift in Sources */,
+				F3A497A6247047B7009D08DF /* ConcreteCollegue1.swift in Sources */,
+				F3A497982470160F009D08DF /* CreditCardsIteractor.swift in Sources */,
+				F362016A2479394100487B91 /* GoldModule.swift in Sources */,
+				F3583732246EA70300F136DC /* PaymentInAdvanceCardFactory.swift in Sources */,
+				F3A497D124716C1B009D08DF /* TrafficLight.swift in Sources */,
+				F36201152473FF2700487B91 /* OperationAdaptee.swift in Sources */,
+				F3A9D73E246F156900515150 /* GoldHandler.swift in Sources */,
+				F3A4982C247307AE009D08DF /* ClassicCreditCardVisitor.swift in Sources */,
+				F36201682479393300487B91 /* BlackModule.swift in Sources */,
+				F3620189247991F600487B91 /* Private.swift in Sources */,
+				F3A9D742246FD5E500515150 /* BlackHandler.swift in Sources */,
+				F362016E247939C400487B91 /* CreditMarker.swift in Sources */,
+				F36201972479AE0600487B91 /* Internet.swift in Sources */,
+				F36201242476D7B300487B91 /* SecureCreditCard.swift in Sources */,
+				F3A497CF24716BF8009D08DF /* Observer.swift in Sources */,
+				F362013E2476F84D00487B91 /* CurrentAccount.swift in Sources */,
+				F3A9D757246FE77E00515150 /* CreditCardDesactivateCommand.swift in Sources */,
+				F362014E24782DBC00487B91 /* BlackCreditComponent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F3CB06C0246C6EAA00319BC4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3CB06C1246C6EAA00319BC4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F3CB06C5246C6EB000319BC4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3CB06C6246C6EB000319BC4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3CB06C9246C6EB000319BC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F3CB06CA246C6EB000319BC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3CB06CC246C6EB000319BC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = gggg/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Alberto.gggg;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3CB06CD246C6EB000319BC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = gggg/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Alberto.gggg;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3CB06B2246C6EAA00319BC4 /* Build configuration list for PBXProject "gggg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3CB06C9246C6EB000319BC4 /* Debug */,
+				F3CB06CA246C6EB000319BC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3CB06CB246C6EB000319BC4 /* Build configuration list for PBXNativeTarget "gggg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3CB06CC246C6EB000319BC4 /* Debug */,
+				F3CB06CD246C6EB000319BC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3CB06AF246C6EAA00319BC4 /* Project object */;
+}
